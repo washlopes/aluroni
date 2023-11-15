@@ -5,6 +5,7 @@ import styles from './Cardapio.module.scss';
 import { ReactComponent as Logo} from 'assets/logo.svg'
 import Filtros from './Filtros';
 import Ordenador from './Ordenador';
+import Itens from './Itens/ index';
 
 
 function Cardapio() {
@@ -30,6 +31,7 @@ function Cardapio() {
                     <Filtros  filtro={filtro} setFiltro={setFiltro}/>
                     <Ordenador ordenador={ordenador} setOrdenador={setOrdenador} />
                 </div>
+                <Itens />
             </section>
         </main>
     )
