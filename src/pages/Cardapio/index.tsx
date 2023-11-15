@@ -6,7 +6,7 @@ import styles from './Cardapio.module.scss';
 import Filtros from './Filtros';
 import Ordenador from './Ordenador';
 import Itens from './Itens/ index';
-import Menu from 'components/Menu';
+import stylesTema from 'styles/Tema.module.scss';
 
 
 function Cardapio() {
@@ -16,22 +16,18 @@ function Cardapio() {
     const [ordenador, setOrdenador] = useState('');
 
     return (
-        <main>                      
-            <header className={styles.header}>
-                <div className={styles.header__text}>
-                    A casa do código e da massa
-                </div>
-            </header>
-            <section className={styles.cardapio}>
-                <h3 className={styles.cardapio__titulo}>Cardápio</h3>
-                <Buscador busca={busca} setBusca={setBusca} />
-                <div className={styles.Cardapio__filtros}>
-                    <Filtros  filtro={filtro} setFiltro={setFiltro}/>
-                    <Ordenador ordenador={ordenador} setOrdenador={setOrdenador} />
-                </div>
-                <Itens busca={busca} filtro={filtro} ordenador={ordenador}/>
-            </section>
-        </main>
+                             
+            
+        <section className={styles.cardapio}>
+            <h3 className={stylesTema.titulo}>Cardápio</h3>
+            <Buscador busca={busca} setBusca={setBusca} />
+            <div className={styles.Cardapio__filtros}>
+                <Filtros  filtro={filtro} setFiltro={setFiltro}/>
+                <Ordenador ordenador={ordenador} setOrdenador={setOrdenador} />
+            </div>
+            <Itens busca={busca} filtro={filtro} ordenador={ordenador}/>
+        </section>
+        
     );
 }
 
