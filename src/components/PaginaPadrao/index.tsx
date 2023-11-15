@@ -13,6 +13,7 @@ export default function PaginaPadrao() {
             </header>
             <div className={stylesTema.container} >
                 <Outlet />
+                
             </div>
         </>
         
