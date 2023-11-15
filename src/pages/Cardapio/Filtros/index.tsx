@@ -25,14 +25,14 @@ function Filtros({filtro, setFiltro} : Props) {
                     [styles.filtros__filtro] : true,
                     [styles['filtros__filtro--ativo']] : filtro === opcao.id
                 })}
-                 key={opcao.id}
-                    onClick={() => selecionarFiltro(opcao)}
+                key={opcao.id}
+                onClick={() => selecionarFiltro(opcao)}
                 >
                     {opcao.label}
                 </button>
             ))}
         </div>
-    )
+    );
 }
 
 export default Filtros;
